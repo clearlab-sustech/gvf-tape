@@ -1,0 +1,17 @@
+materials-ori/**
+luotest**
+.vscode/**
+trash/**
+.DS_Store
+**/.DS_Store
+
+## tmp
+# materials/*
+materials/ithor_gif**
+materials/libero_gif**
+materials/mw_gif**
+
+# !materials/ithor/
+# !materials/libero/
+# !materials/mw/
+# !materials/lb-suc-vs-numRollout/

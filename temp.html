@@ -1,0 +1,694 @@
+<section class="section" style="margin-top: 11px; padding-top: 2.0rem">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <!-- <div class="column is-full-width" style="margin-top: 0px; padding-top: 0px"> -->
+        <div class="column is-four-fifths" style="margin-top: 0px; padding-top: 0px">
+        <!-- <div class="column is-five-sixths" style="margin-top: 0px; padding-top: 0px"> -->
+  
+          <!-- We illustrate how we can ground video models to actions without using actions labels through goal conditioned exploration with the synthesized video frames as goal. -->
+  
+            <div class="video-container text-centered">
+              <!-- preload=""  autoplay="" -->
+              <!-- TODO: -->
+              <video width="88%" playsinline="" muted="" preload="metadata" controls class="teaser-video-style">
+                  <source src="materials/50-animate-ppt-v1.mp4" type="video/mp4">
+              </video>
+            <!-- background-color: #ebf0f1; padding: 1rem -->
+            <p style="font-size: 19px;">
+              <!-- TODO: -->
+              <!-- <b>Video Summary.</b> 7400B8 -->
+              <b style="color: #5A36CD">Grounding Video Models to Actions.</b>
+              We learn a goal-conditioned policy to ground video models to executable actions without any action demonstrations or environment rewards
+              <!-- for learning a goal-conditioned policy  -->
+              by using the synthesized video frames as goal to direct the exploration and training the policy with the collected interaction data.
+              <!-- with subgoals given by a video model, -->
+              <!-- given task descriptions, -->
+              <!-- In inference,  -->
+              The resulting policy is able to complete a diverse set of tasks by accurately following the subgoals from the synthesized video.
+  
+              <!-- We validate our approach on three tabletop manipulation environments, Libero, Meta-World, Calvin, and one visual navigation environment iTHOR. -->
+              <!-- and the resulting policy gradually improves over more video-guided exploration episodes. -->
+              
+            </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <hr>
+<!-- 
+   -->
+
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+  
+          <!-- <h2 class="title is-4"> Diverse Motion Plan Morphology </h2> -->
+          <h2 class="title is-4"> Policy Rollout over Increasing Video-guided Exploration Episodes</h2>
+  
+  
+          <div class="container bg-3">
+            <div class="row centered-caption" style="justify-content: center;">
+              <div class="video-container div_dd_list_1" style="gap: 0px" id="div_lb_qual_rout">
+                  <!-- <img src="./materials/rm2d-multi-h/comp_env60_base.png" alt="" width="100%" style="margin-top: 5px;"> -->
+                  <div class="multi_hor_rm2d_item">
+                    <!-- <p class="multi_hor_rm2d_caption">Synthesized Video</p> -->
+                    <p class="splide_lb_suc_vs_rollout_repl">
+                      Synthesized Video
+                      <span class="replay_lb_suc" video_section="div_lb_qual_rout">
+                        <img src="static/replay.png" />
+                        <span>replay</span>
+                      </span>
+                    </p>
+                    <br/>
+                    <!-- <img src="./materials/rm2d-multi-h/comp_env60_base.png" alt="" style="max-width: 235px"> -->
+                    <video id="lb_qual_nVidEp_predv" muted muted preload="metadata">
+                      <source src="materials/lb-suc-vs-numRollout/predv_0_tk71_envSd120_fps4.mp4" type="video/mp4">
+                    </video>
+                  </div>
+  
+  
+                <!-- &nbsp; &nbsp; &nbsp; &nbsp; -->
+                <!-- style="min-width: 100px;" -->
+                <!-- <div class="splide_kuka_space"></div> -->
+  
+                <!-- <div class="col-sm-3 centered-caption"> -->
+                  <div class="multi_hor_rm2d_item">
+                    <div class="multi_hor_rm2d_caption"># of video-guided episodes
+                      <div class="select is-small">     
+                        <select id="rm2d-comp-multi-h-1" onchange="update_rm2d_comp_multiH()">
+                          <option value="0">0</option>
+                          <option value="50">50</option>
+                          <option value="100">100</option>
+                          <option value="300" selected="selected">300</option>
+                        </select>
+                      </div>
+                    </div>
+                    <br/>
+                    <!-- width:100%;  -->
+                    <!-- style="max-width: 235px" -->
+                    <video id="lb_qual_nVidEp_rollout" muted muted preload="metadata">
+                      <source src="materials/lb-suc-vs-numRollout/rollout_tk71_envSd120_fps60_r300.mp4" type="video/mp4">
+                    </video>
+                    <!-- </div> -->
+                  </div>
+  
+                
+              <!-- <br> -->
+              <div class="left-caption" style="margin-top: 10px;">
+                <b> Synthesized Video and Corresponding Environment Rollout of Policy Trained with Different Number of Video-guided Exploration Episodes.</b> 
+                While the policy struggles to accomplish the task without video-guided exploration (at 0 video-guided episodes), the policy rapidly improves after the video-guided exploration is introduced.
+                <!-- While the policy struggles to make any meaningful progress before the start of video-guided exploration (0 video-guided episodes), its performance rapidly increase with the introduction of video-guided exploration. -->
+                <!-- Left: synthesized video from the video model. -->
+                <!-- Right: various motion path selection according to the planning horizon. -->
+              </div>
+              
+              
+            </div>
+            
+            
+          </div>
+         
+  
+          
+  
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <hr>
+  
+  
+  
+  
+  <!-- ================================= -->
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- ================================================== -->
+  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h2 class="title is-4">Meta-World Environment</h2> -->
+          <h2 class="title is-4">Libero Environment</h2>
+  
+          <section class="hero is-light is-small" style="margin: 0px; padding: 0px">
+            <div class="container is-max-desktop"  style="margin: 0px;  padding: 0px">
+              <div class="hero-body"  style="margin: 0px;  padding-bottom: 10px; padding-top: 10px">
+  
+                <div class="container is-max-desktop" style="overflow: hidden; margin: 0px">
+  
+                  <div id="splide-lb-qual-sc1" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+  
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk65">
+  
+                              <!-- <div style="text-align: center; white-space: nowrap; overflow: visible;">
+                                <span style="position: relative; display: inline-block;">
+                                    Title
+                                    <span style="position: absolute; left: 100%; margin-left: 10px; white-space: nowrap;">Other Text</span>
+                                </span>
+                              </div> -->
+                              
+                              <!-- style="text-align: center; white-space: nowrap; overflow: visible;" -->
+                              <!-- style="position: absolute; left: 100%; margin-left: 10px; white-space: nowrap;" -->
+  
+                            <!-- <div style="text-align: center; white-space: nowrap; overflow: visible;">
+                              <span class="splide_kuka_prob_id">
+                                put the red mug on the left plate
+                                <span class="replay" style="position: absolute; left: 100%; margin-left: 10px; white-space: nowrap;">
+                                  <img src="static/replay.png" />
+                                  <span>replay</span>
+                                </span>
+                              </span>
+                            </div> -->
+                            
+                              
+                            
+                            <!-- <div class="replay">
+                                    <img src="static/replay.png" />
+                                    <div>replay</div>
+                                  </div> -->
+                                  <!-- <button class="replay-button" onclick="replayVideosInDiv('luotest')">Replay Video</button> -->
+                            
+                            <!-- <div style="position: relative">
+                                <p class="splide_kuka_prob_id">
+                                  put the red mug on the left plate
+                                </p>
+                                <span class="replay">
+                                  <img src="static/replay.png" />
+                                  <span>replay</span>
+                                </span>
+                            </div>
+                               -->
+  
+                               <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the red mug on the left plate
+                                    <!-- onclick="replayVideosInDiv('lb_qual_tk65')" -->
+                                    <span class="replay" video_section="lb_qual_tk65">
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk65/110-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk65/65-110-0_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk65/110-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-tk65/110-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk65/110-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+                          <!-- Task 66 -->
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk66">
+  
+                               <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the red mug on the right plate
+                                    <span class="replay"  video_section="lb_qual_tk66">
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk66/122-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk66/66-122-False_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk66/122-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-10k-tk66/122-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk66/122-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+  
+                          <!-- Task 67 -->
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk67">
+  
+                               <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the white mug on the left plate
+                                    <span class="replay" video_section='lb_qual_tk67'>
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk67/107-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk67/67-107-0_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk67/107-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-10k-tk67/107-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk67/107-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+  
+                          <!-- Task 68 -->
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk68">
+  
+                              <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the white mug on the left plate
+                                    <span class="replay" video_section="lb_qual_tk68">
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk68/114-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk68/68-114-0_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk68/114-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-10k-tk68/114-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk68/114-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+                          
+  
+                        </ul>
+                    </div>
+                  </div>
+  
+  
+  
+  
+  
+                  <!-- Scene 2 -->
+                  <!-- Task 69 -->
+                  <div id="splide-lb-qual-sc2" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+  
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk69">
+  
+                               <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the chocolate pudding to the left of the plate
+                                    <span class="replay" video_section="lb_qual_tk69">
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk69/109-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk69/69-109-False_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk69/109-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-10k-tk69/109-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk69/109-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+                          <!-- Task 70 -->
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk70">
+  
+                               <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the chocolate pudding to the right of the plate
+                                    <span class="replay"  video_section="lb_qual_tk70">
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk70/111-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk70/70-111-False_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk70/111-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-10k-tk70/111-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk70/111-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+  
+                          <!-- Task 71 -->
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk71">
+  
+                               <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the red mug on the plate
+                                    <span class="replay" video_section='lb_qual_tk71'>
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk71/122-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk71/71-122-False_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk71/122-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-10k-tk71/122-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk71/122-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+  
+                          <!-- Task 72 -->
+                          <li class="splide__slide splide_kuka">
+  
+                            <div class="splide_page_div_1" id="lb_qual_tk72">
+  
+                              <div>
+                                <span class="splide_kuka_prob_id_repl">
+                                    put the white mug on the plate
+                                    <span class="replay" video_section="lb_qual_tk72">
+                                      <img src="static/replay.png" />
+                                      <span>replay</span>
+                                    </span>
+                                </span>
+                              </div>
+                              
+  
+                              <div class="kuka_base_row">
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk72/109-True-predv.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Synthesized Video</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/avdc-evSd2-tk72/72-109-False_v2.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">AVDC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/metabc-10k-tk72/109-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">BC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/gcbc-10k-tk72/109-False.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">GCBC</p>
+                                </div>
+  
+                                <div>
+                                  <video playsinline="" autoplay="" muted="">
+                                    <source src="materials/libero/ours-evSd2-tk72/109-True.mp4" type="video/mp4">
+                                  </video>
+                                  <p class="splide_kuka_caption">Ours</p>
+                                </div>
+  
+                              </div>
+  
+                            </div>
+                          </li>
+  
+                          
+  
+                        </ul>
+                    </div>
+                  </div>
+  
+  
+  
+  
+  
+  
+                  
+  
+  
+  

@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Project Page for Generative Visual Foresight Meets Task-Agnostic Pose Estimation in Robotic Table-top Manipulation.">
+  <meta name="keywords" content="Embodied AI, Artificial Intelligence, Machine Learning, Diffusion Model, Decision Making, Robotics, Video Model, Behavior Cloning, Pose Estimation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TODO: -->
+  <!-- TODO: -->
+  <meta name="author" content="Yunhao Luo,Yilun Du">
+  <!-- TODO: -->
+  <!-- TODO: -->
+  <title>Generative Visual Foresight Meets Task-Agnostic Pose Estimation in Robotic Table-top Manipulation</title>
+
+  <!-- TODO: -->
+  <!-- TODO: -->
+  <!-- <meta name="google-site-verification" content="luiKJ6NTZHsgoD15xoPljBeAHAgSwMOoXhBmQG8-LQ8" /> -->
+  <!-- TODO: -->
+  <!-- TODO: -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="load-mathjax.js" async></script>
+
+  <link rel="stylesheet" href="./static/css/splide.min.css">
+  <script src="./static/js/splide.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="./materials/favicon.ico" />
+
+</head>
+
+<body>
+
+<!-- TODO: -->
+<!-- Navigation Bar -->
+
+<!-- style="margin-bottom: 10px; padding-bottom: 10px" -->
+<!-- style="margin-bottom: 0px; padding-bottom: 0px" -->
+<section class="hero" style="background-color: #fae4cf;">
+  <div class="hero-body hero-body-dec19" >
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- is-1 or is-2 -->
+          <h1 class="title publication-title" style="font-size: 43px;">
+            <!-- Grounding Video Models to Actions through Goal Conditioned Exploration</h1> -->
+            Generative Visual Foresight Meets <br> 
+            <span style="color: #974F9F;">Task-Agnostic</span> 
+            <span style="color: #4A7CB4;">Pose</span> 
+            <span style="color: #67AC55;">Estimation</span> 
+              in Robotic Table-top Manipulation </h1>
+
+            <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhangchuye.github.io/">Chuye Zhang</a><sup>* 1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Xiaoxiong Zhang</a><sup>* 1</sup>
+            </span>
+              <span class="author-block">
+                <a href="">Wei Pan</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Linfang Zheng</a><sup>† 2,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Wei Zhang</a><sup>† 1,2</sup>
+              </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <!-- <img src="static/Brown-logo-crop.png" width="20px"> -->
+              <!-- <sup>1</sup>Georgia Institute of Technology, University -->
+              <sup>1</sup>Southern University of Science and Technology,
+              <sup>2</sup>LimX Dynamics,
+              <sup>3</sup>The University of Hong Kong
+            </span>
+            <!-- &nbsp; -->
+            <!-- <span class="author-block"> -->
+              <!-- <img src="static/MIT_logo.svg" width="40px"> -->
+              <!-- <sup>2</sup>MIT -->
+            <!-- </span> -->
+
+            <!-- <br>
+            <img src="static/Brown-logo.png" width="110px">
+            &nbsp;
+            &nbsp;
+            <img src="static/MIT-logo.svg" width="80px"> -->
+
+            <br> CORL 2025 (Poster)
+
+            <!-- <br>
+            <img src="static/Brown-logo.png" width="190px">
+            &nbsp;
+            &nbsp;
+            <img src="static/MIT-logo.svg" width="135px"> -->
+
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv -->
+              <span class="link-block">
+                <!-- TODO: Add arXiv link -->
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv(Coming Soon)</span>
+                </a>
+              </span>
+
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2411.07223"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+
+              
+
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/video-to-action/video-to-action-release"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Exploration Code</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-file-video"></i>
+                  </span>
+                  <span>Code(Coming Soon)</span>
+                </a>
+              </span>
+
+              <!-- <span class="link-block">
+                <a href="https://colab.research.google.com/drive/1pARD89PfSzF3Ml6virZjztEJKWhXVkBY?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img width="20px" src="static/google-colab-32.png">
+                  </span>
+                  <span>Colab</span>
+                </a>
+              </span> -->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" style="margin-top: 11px; padding-top: 2.0rem">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- <div class="column is-full-width" style="margin-top: 0px; padding-top: 0px"> -->
+      <div class="column is-four-fifths" style="margin-top: 0px; padding-top: 0px">
+      <!-- <div class="column is-five-sixths" style="margin-top: 0px; padding-top: 0px"> -->
+
+        <!-- We illustrate how we can ground video models to actions without using actions labels through goal conditioned exploration with the synthesized video frames as goal. -->
+
+          <div class="video-container text-centered">
+            <!-- preload=""  autoplay="" -->
+            <!-- TODO: -->
+            <video width="88%" playsinline="" muted="" preload="metadata" controls class="teaser-video-style">
+                <source src="materials/50-animate-ppt-v1.mp4" type="video/mp4">
+            </video>
+          <!-- background-color: #ebf0f1; padding: 1rem -->
+          <p style="font-size: 19px;">
+            <!-- TODO: -->
+            <!-- <b>Video Summary.</b> 7400B8 -->
+            <b style="color: #5A36CD">Grounding Video Models to Actions.</b>
+            We learn a goal-conditioned policy to ground video models to executable actions without any action demonstrations or environment rewards
+            <!-- for learning a goal-conditioned policy  -->
+            by using the synthesized video frames as goal to direct the exploration and training the policy with the collected interaction data.
+            <!-- with subgoals given by a video model, -->
+            <!-- given task descriptions, -->
+            <!-- In inference,  -->
+            The resulting policy is able to complete a diverse set of tasks by accurately following the subgoals from the synthesized video.
+
+            <!-- We validate our approach on three tabletop manipulation environments, Libero, Meta-World, Calvin, and one visual navigation environment iTHOR. -->
+            <!-- and the resulting policy gradually improves over more video-guided exploration episodes. -->
+            
+          </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width"> -->
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+
+      Large video models, pretrained on massive amounts of Internet video, provide a rich source of physical knowledge about the dynamics and motions of objects and tasks.
+      However, video models are not grounded in the embodiment of an agent, and do not describe how to actuate the world to reach the visual states depicted in a video.
+      To tackle this problem, current methods use a separate vision-based inverse dynamic model trained on embodiment-specific data to map image states to actions. 
+      Gathering data to train such a model is often expensive and challenging, and this model is limited to visual settings similar to the ones in which data is available.
+      In this paper, we investigate how to directly  ground video models to continuous actions through self-exploration in the embodied environment -- using generated video states as visual goals for exploration.
+      We propose a framework that uses trajectory level action generation in combination with video guidance to
+      enable an agent to solve complex tasks without any external supervision, e.g., rewards, action labels, or segmentation masks.
+      We validate the proposed approach on 8 tasks in Libero, 6 tasks in MetaWorld, 4 tasks in Calvin, and 12 tasks in iThor Visual Navigation. 
+      We show how our approach is on par with or even surpasses multiple behavior cloning baselines trained on expert demonstrations while without requiring any action annotations. 
+
+            
+          </p>
+        </div>
+
+
+        <figure>
+          <img width="75%" src="materials/1-teaser-v4-for-web.png" style="min-width: 200px">
+        <p class="caption">
+            <b>Method Overview.</b>
+            Our approach learns to ground a large pretrained video model into continuous actions through goal-directed exploration in an environment. 
+            Given a synthesized video, a goal-conditioned policy attempts to reach each visual goal in the video, 
+            with data in the resulting real-world execution saved in a replay buffer to train the goal-conditioned policy.
+        </p>
+      </figure>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<hr>
+
+
+
+<!-- ============= Policy Rollout vs Num Episodes ============== --> 
+<!-- ============= Policy Rollout vs Num Episodes ============== --> 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+        <!-- <h2 class="title is-4"> Diverse Motion Plan Morphology </h2> -->
+        <h2 class="title is-4"> Policy Rollout over Increasing Video-guided Exploration Episodes</h2>
+
+
+        <div class="container bg-3">
+          <div class="row centered-caption" style="justify-content: center;">
+            <div class="video-container div_dd_list_1" style="gap: 0px" id="div_lb_qual_rout">
+                <!-- <img src="./materials/rm2d-multi-h/comp_env60_base.png" alt="" width="100%" style="margin-top: 5px;"> -->
+                <div class="multi_hor_rm2d_item">
+                  <!-- <p class="multi_hor_rm2d_caption">Synthesized Video</p> -->
+                  <p class="splide_lb_suc_vs_rollout_repl">
+                    Synthesized Video
+                    <span class="replay_lb_suc" video_section="div_lb_qual_rout">
+                      <img src="static/replay.png" />
+                      <span>replay</span>
+                    </span>
+                  </p>
+                  <br/>
+                  <!-- <img src="./materials/rm2d-multi-h/comp_env60_base.png" alt="" style="max-width: 235px"> -->
+                  <video id="lb_qual_nVidEp_predv" muted muted preload="metadata">
+                    <source src="materials/lb-suc-vs-numRollout/predv_0_tk71_envSd120_fps4.mp4" type="video/mp4">
+                  </video>
+                </div>
+
+
+              <!-- &nbsp; &nbsp; &nbsp; &nbsp; -->
+              <!-- style="min-width: 100px;" -->
+              <!-- <div class="splide_kuka_space"></div> -->
+
+              <!-- <div class="col-sm-3 centered-caption"> -->
+                <div class="multi_hor_rm2d_item">
+                  <div class="multi_hor_rm2d_caption"># of video-guided episodes
+                    <div class="select is-small">     
+                      <select id="rm2d-comp-multi-h-1" onchange="update_rm2d_comp_multiH()">
+                        <option value="0">0</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="300" selected="selected">300</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br/>
+                  <!-- width:100%;  -->
+                  <!-- style="max-width: 235px" -->
+                  <video id="lb_qual_nVidEp_rollout" muted muted preload="metadata">
+                    <source src="materials/lb-suc-vs-numRollout/rollout_tk71_envSd120_fps60_r300.mp4" type="video/mp4">
+                  </video>
+                  <!-- </div> -->
+                </div>
+
+              
+            <!-- <br> -->
+            <div class="left-caption" style="margin-top: 10px;">
+              <b> Synthesized Video and Corresponding Environment Rollout of Policy Trained with Different Number of Video-guided Exploration Episodes.</b> 
+              While the policy struggles to accomplish the task without video-guided exploration (at 0 video-guided episodes), the policy rapidly improves after the video-guided exploration is introduced.
+              <!-- While the policy struggles to make any meaningful progress before the start of video-guided exploration (0 video-guided episodes), its performance rapidly increase with the introduction of video-guided exploration. -->
+              <!-- Left: synthesized video from the video model. -->
+              <!-- Right: various motion path selection according to the planning horizon. -->
+            </div>
+            
+            
+          </div>
+          
+          
+        </div>
+       
+
+        
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+
+
+<!-- ================================= -->
+
+
+
+
+
+
+
+
+<!-- ================================================== -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-4">Meta-World Environment</h2> -->
+        <h2 class="title is-4">Libero Environment</h2>
+
+        <section class="hero is-light is-small" style="margin: 0px; padding: 0px">
+          <div class="container is-max-desktop"  style="margin: 0px;  padding: 0px">
+            <div class="hero-body"  style="margin: 0px;  padding-bottom: 10px; padding-top: 10px">
+
+              <div class="container is-max-desktop" style="overflow: hidden; margin: 0px">
+
+                <div id="splide-lb-qual-sc1" class="splide">
+                  <div class="splide__track">
+                      <ul class="splide__list">
+
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk65">
+
+                            <!-- <div style="text-align: center; white-space: nowrap; overflow: visible;">
+                              <span style="position: relative; display: inline-block;">
+                                  Title
+                                  <span style="position: absolute; left: 100%; margin-left: 10px; white-space: nowrap;">Other Text</span>
+                              </span>
+                            </div> -->
+                            
+                            <!-- style="text-align: center; white-space: nowrap; overflow: visible;" -->
+                            <!-- style="position: absolute; left: 100%; margin-left: 10px; white-space: nowrap;" -->
+
+                          <!-- <div style="text-align: center; white-space: nowrap; overflow: visible;">
+                            <span class="splide_kuka_prob_id">
+                              put the red mug on the left plate
+                              <span class="replay" style="position: absolute; left: 100%; margin-left: 10px; white-space: nowrap;">
+                                <img src="static/replay.png" />
+                                <span>replay</span>
+                              </span>
+                            </span>
+                          </div> -->
+                          
+                            
+                          
+                          <!-- <div class="replay">
+                                  <img src="static/replay.png" />
+                                  <div>replay</div>
+                                </div> -->
+                                <!-- <button class="replay-button" onclick="replayVideosInDiv('luotest')">Replay Video</button> -->
+                          
+                          <!-- <div style="position: relative">
+                              <p class="splide_kuka_prob_id">
+                                put the red mug on the left plate
+                              </p>
+                              <span class="replay">
+                                <img src="static/replay.png" />
+                                <span>replay</span>
+                              </span>
+                          </div>
+                             -->
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the red mug on the left plate
+                                  <!-- onclick="replayVideosInDiv('lb_qual_tk65')" -->
+                                  <span class="replay" video_section="lb_qual_tk65">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk65/110-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk65/65-110-0_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk65/110-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-tk65/110-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk65/110-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+                        <!-- Task 66 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk66">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the red mug on the right plate
+                                  <span class="replay"  video_section="lb_qual_tk66">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk66/122-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk66/66-122-False_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk66/122-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-10k-tk66/122-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk66/122-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- Task 67 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk67">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the white mug on the left plate
+                                  <span class="replay" video_section='lb_qual_tk67'>
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk67/107-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk67/67-107-0_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk67/107-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-10k-tk67/107-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk67/107-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- Task 68 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk68">
+
+                            <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the white mug on the left plate
+                                  <span class="replay" video_section="lb_qual_tk68">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk68/114-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk68/68-114-0_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk68/114-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-10k-tk68/114-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk68/114-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+                        
+
+                      </ul>
+                  </div>
+                </div>
+
+
+
+
+
+                <!-- Scene 2 -->
+                <!-- Task 69 -->
+                <div id="splide-lb-qual-sc2" class="splide">
+                  <div class="splide__track">
+                      <ul class="splide__list">
+
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk69">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the chocolate pudding to the left of the plate
+                                  <span class="replay" video_section="lb_qual_tk69">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk69/109-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk69/69-109-False_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk69/109-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-10k-tk69/109-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk69/109-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+                        <!-- Task 70 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk70">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the chocolate pudding to the right of the plate
+                                  <span class="replay"  video_section="lb_qual_tk70">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk70/111-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk70/70-111-False_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk70/111-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-10k-tk70/111-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk70/111-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- Task 71 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk71">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the red mug on the plate
+                                  <span class="replay" video_section='lb_qual_tk71'>
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk71/122-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk71/71-122-False_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk71/122-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-10k-tk71/122-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk71/122-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- Task 72 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="lb_qual_tk72">
+
+                            <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  put the white mug on the plate
+                                  <span class="replay" video_section="lb_qual_tk72">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk72/109-True-predv.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/avdc-evSd2-tk72/72-109-False_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/metabc-10k-tk72/109-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/gcbc-10k-tk72/109-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/libero/ours-evSd2-tk72/109-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+                        
+
+                      </ul>
+                  </div>
+                </div>
+
+
+
+
+
+
+                
+
+
+
+
+                
+
+
+
+              </div>
+              <b> Qualitative Comparison in Libero Environment.</b> 
+        We present environment rollouts of our goal-conditioned exploration policy along with  various baselines -- <a href="https://flow-diffusion.github.io/" class="citation-link">AVDC</a>, Behavior Cloning (BC), and Goal-conditioned Behavior Cloning (GCBC).
+        Our policy, shown in the rightmost column, is able to follow the synthesized video and complete the task. 
+        In contrast, BC and GCBC cannot accurately locate the target in the unseen setups; while AVDC can move the end effector close to the mug, it cannot successfully grasp the concave objects and get stuck in some local regions.
+            </div>
+          </div>  
+        </section>
+        
+
+
+
+      
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<hr>
+
+
+<!-- Begins Meta-World Qualitative Results -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Meta-World Environment</h2>
+
+        <section class="hero is-light is-small" style="margin: 0px; padding: 0px">
+          <div class="container is-max-desktop"  style="margin: 0px;  padding: 0px">
+            <div class="hero-body"  style="margin: 0px;  padding-bottom: 10px; padding-top: 10px">
+
+              <div class="container is-max-desktop" style="overflow: hidden; margin: 0px">
+
+                <div id="splide-mw-qual" class="splide">
+                  <div class="splide__track">
+                      <ul class="splide__list">
+
+
+
+                        <!-- MW TK 4 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="mw_qual_tk4">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Hammer
+                                  <span class="replay" video_section="mw_qual_tk4">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/4-ours-hammer/016-True-predv0.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/4-avdc-evSd1-hammer/corner2-016-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/4-metabc-100k-hammer/016-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/4-gcbc-100k-hammer/016-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/4-ours-hammer/016-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- MW TK 6 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="mw_qual_tk6">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Assembly
+                                  <span class="replay" video_section="mw_qual_tk6">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="" preload="none">
+                                  <source src="materials/mw/6-ours-assembly-C2/012-True-predv0.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="" preload="none">
+                                  <source src="materials/mw/6-avdc-assembly/corner2_12_crop.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="" preload="none">
+                                  <source src="materials/mw/6-bc-assembly/012-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="" preload="none">
+                                  <source src="materials/mw/6-gcbc-assembly/012-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="" preload="none">
+                                  <source src="materials/mw/6-ours-assembly-C2/012-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- MW Tk 1 -->
+                        <li class="splide__slide splide_kuka">
+                          <div class="splide_page_div_1" id="mw_qual_tk1">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Door Open
+                                  <span class="replay" video_section="mw_qual_tk1">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="" preload="none">
+                                  <source src="materials/mw/1-ours-door-open/014-True-predv0.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/1-avdc-evSd1-door-open/corner2-014-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/1-metabc-100k-door-open/014-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/1-gcbc-100k-door-open/014-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/1-ours-door-open/014-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- MW TK 2 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="mw_qual_tk2">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Door Close
+                                  <span class="replay" video_section="mw_qual_tk2">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/2-ours-door-close/000-True-predv0.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/2-avdc-evSd1-door-close/corner2-000-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/2-metabc-100k-door-close/000-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/2-gcbc-100k-door-close/000-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <!-- TODO: -->
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/2-ours-door-close/000-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+                        <!-- MW TK 3 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="mw_qual_tk3">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Handle Press
+                                  <span class="replay" video_section="mw_qual_tk3">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/3-ours-handle-press/009-True-predv0.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/3-avdc-evSd1-handle-press/corner2_9_crop.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/3-metabc-100k-handle-press/009-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/3-gcbc-100k-handle-press/009-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+                              <!-- TODO: -->
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/mw/3-ours-handle-press/009-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+                        
+
+                        
+
+                        
+
+                      </ul>
+                  </div>
+                </div>
+
+
+              </div>
+              <!-- -- <a href="https://flow-diffusion.github.io/" class="citation-link">AVDC</a>, Behavior Cloning (BC), and Goal-conditioned Behavior Cloning (GCBC) -->
+              <b> Qualitative Comparison in Meta-World Environment.</b> 
+              We present environment rollouts of our goal-conditioned exploration policy along with  various baselines.
+              Our Policy can accurately reach each subgoal given by the synthesized video and thus completes the tasks, while GCBC and other baselines fail. This is probably due to that our goal-directed exploration can significantly enhance the policy by focusing the exploration on the task-relevant state space. 
+              <!-- video-guided -->
+            </div>
+          </div>  
+        </section>
+
+        <!-- <b> Qualitative Comparison in Meta-World Environment.</b>  -->
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+<!-- Begins iTHOR Qualitative Results -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">iTHOR Visual Navigation Environment</h2>
+
+        <section class="hero is-light is-small" style="margin: 0px; padding: 0px">
+          <div class="container is-max-desktop"  style="margin: 0px;  padding: 0px">
+            <div class="hero-body"  style="margin: 0px;  padding-bottom: 10px; padding-top: 10px">
+
+              <div class="container is-max-desktop" style="overflow: hidden; margin: 0px">
+
+                <div id="splide-ithor-qual" class="splide">
+                  <div class="splide__track">
+                      <ul class="splide__list">
+
+
+
+                        <!-- iThor FloorPlan1 Bread 19 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="ithor_qual_fp1">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Kitchen, Target: Bread
+                                  <span class="replay" video_section="ithor_qual_fp1">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan1-Bread/predv_Cat_tkFloorPlan1_Bread_envSd19_fps4_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/avdc-evSd1-FloorPlan1-Bread/019-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/metabc-10k-FloorPlan1-Bread/019-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/gcbc-10k-FloorPlan1-Bread/019-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan1-Bread/rollout_tkFloorPlan1_Bread_envSd19_fps4.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+                        <!-- FloorPlan 201 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="ithor_qual_fp2">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Living Room, Target: Television
+                                  <span class="replay" video_section="ithor_qual_fp2">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan201-Television/predv_Cat_tkFloorPlan201_Television_envSd12_fps4_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/avdc-evSd1-FloorPlan201-Television/012-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/metabc-10k-FloorPlan201-Television/012-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/gcbc-10k-FloorPlan201-Television/012-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan201-Television/rollout_tkFloorPlan201_Television_envSd12_fps4.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- FloorPlan 301 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="ithor_qual_fp301">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Bedroom, Target: Blinds
+                                  <span class="replay" video_section="ithor_qual_fp301">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <!-- TODO: -->
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan301-Blinds/004-True_predv_cat.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/avdc-evSd1-FloorPlan301-Blinds/004-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/metabc-10k-FloorPlan301-Blinds/004-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/gcbc-10k-FloorPlan301-Blinds/004-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan301-Blinds/004-True.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        <!-- FloorPlan 401 -->
+                        <li class="splide__slide splide_kuka">
+
+                          <div class="splide_page_div_1" id="ithor_qual_fp401">
+
+                             <div>
+                              <span class="splide_kuka_prob_id_repl">
+                                  Bathroom, Target: Mirror
+                                  <span class="replay" video_section="ithor_qual_fp401">
+                                    <img src="static/replay.png" />
+                                    <span>replay</span>
+                                  </span>
+                              </span>
+                            </div>
+                            
+                            <div class="kuka_base_row">
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan401-Mirror/predv_Cat_tkFloorPlan401_Mirror_envSd4_fps4_v2.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Synthesized Video</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/avdc-evSd1-FloorPlan401-Mirror/004-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">AVDC</p>
+                              </div>
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/metabc-10k-FloorPlan401-Mirror/004-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">BC</p>
+                              </div>
+
+                              <!-- TODO: -->
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/gcbc-10k-FloorPlan401-Mirror/004-False.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">GCBC</p>
+                              </div>
+
+
+                              <div>
+                                <video playsinline="" autoplay="" muted="">
+                                  <source src="materials/ithor/ours-evSd4-FloorPlan401-Mirror/rollout_tkFloorPlan401_Mirror_envSd4_fps4.mp4" type="video/mp4">
+                                </video>
+                                <p class="splide_kuka_caption">Ours</p>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </li>
+
+
+                        
+
+                        
+
+                        
+
+                        
+
+                      </ul>
+                  </div>
+                </div>
+
+
+              </div>
+              <b> Qualitative Comparison in iTHOR Environment.</b> 
+              <!-- -- <a href="https://flow-diffusion.github.io/" class="citation-link">AVDC</a>, Behavior Cloning (BC), and Goal-conditioned Behavior Cloning (GCBC). -->
+              We present environment rollouts of our goal-conditioned exploration policy along with various baselines.
+              Both AVDC and BC tend to predict the wrong actions or stop pre-maturely. 
+              Though GCBC is able to perform comparably to our policy, it might require extra action steps (see FloorPlan 301).
+              Our policy is able to successfully reach the target object by correctly following the synthesized video.
+            </div>
+          </div>  
+        </section>
+
+        <!-- <b> Qualitative Comparison in Meta-World Environment.</b>  -->
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- ============= Calvin ============== --> 
+<!-- ============= Calvin ============== --> 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+        <h2 class="title is-4">Qualitative Results in Calvin Environment</h2>
+
+
+        <div class="container bg-3">
+          <div class="row centered-caption" style="justify-content: center;">
+
+            <span class="splide_kuka_prob_id_repl">
+              Task: &nbsp;
+              <!-- </p> -->
+              <div class="select is-small">     
+                <select id="cal-our-qual-list" onchange="update_cal_our_qual_list()">
+                  <option value="lightbulb" selected="selected">turn on lightbulb</option>
+                  <option value="led">turn on LED</option>
+                  <option value="slider">move slider left</option>
+                  <option value="drawer">open drawer</option>
+                </select>
+              </div>
+              <!-- sequential reply -->
+              <span class="replay_lb_suc" id="btn_cal_replay" video_section="div_cal_our_qual">
+                <img src="static/replay.png" />
+                <span>replay</span>
+              </span>
+            </span>
+            
+
+            <div class="video-container" style="gap: 0px" id="div_cal_our_qual">
+
+                <div class="multi_hor_rm2d_item">
+                  <p class="splide_lb_suc_vs_rollout_repl cal_our_qual_caption">
+                    Synthesized Video
+                  </p>
+                  <video id="cal-our-qual-list-predv" muted muted preload="metadata">
+                    <source src="materials/calvin/ours-turn-on-lightbulb/predv_0_tk1_turn_on_lightbulb_envSd105_fps4.mp4" type="video/mp4">
+                  </video>
+                </div>
+
+                <div class="multi_hor_rm2d_item">
+                  <div class="multi_hor_rm2d_caption cal_our_qual_caption"> 
+                    Policy Rollout
+                  </div>
+
+                  <video id="cal-our-qual-list-rollout" muted muted preload="metadata">
+                    <source src="materials/calvin/ours-turn-on-lightbulb/rollout_tk1_turn_on_lightbulb_envSd105_fps70.mp4" type="video/mp4">
+                  </video>
+
+                </div>
+
+              
+
+            <div class="left-caption" style="margin-top: 10px;">
+              <b>Qualitative Results of Our Goal-conditioned Exploration Policy in Calvin Environment.</b> 
+              We present the synthesized video side by side with the policy rollout in the environment. 
+              The policy is only trained by the proposed exploration framework, without access to action annotations or environment rewards (including the task success signal).
+            </div>
+          </div>
+          
+          
+        </div>
+       
+
+        
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="content has-text-justified">
+          <p>
+
+            In this paper, we have presented a self-supervised approach to ground generated videos into actions. As generative video models become increasingly more powerful, we believe that they will be increasingly useful for decision-making, providing powerful priors on how various tasks should be accomplished. As a result, the question of how we can accurately convert generated video plans to actual physical execution will become increasingly more relevant, and our approach points towards one direction to solve this question, through online interaction with the agent's environment.
+      
+
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<hr>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content column is-full-width ">
+    <h2 class="title is-4">BibTeX</h2>
+    <pre><code>@article{luo2024grounding,
+      title={Grounding Video Models to Actions through Goal Conditioned Exploration},
+      author={Luo, Yunhao and Du, Yilun},
+      journal={arXiv preprint arXiv:2411.07223},
+      year={2024}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+
+<!-- <section class="section">
+        <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Related Projects</h2>
+          Check out a list of our related papers on compositional generation and energy based models. A full list can be found <a href="https://energy-based-model.github.io/Energy-based-Model-MIT/">here</a>!
+          <br>
+          <br>
+        <div class="row vspace-top">
+        <div class="col-sm-3">
+            <video width="100%" playsinline="" autoplay="" preload="" muted="">
+                <source src="materials/related/recyle.m4v" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-sm-9">
+          <div class="paper-title">
+            <a href="https://energy-based-model.github.io/reduce-reuse-recycle/">Reduce, Reuse, Recycle: Compositional Generation with Energy-Based Diffusion Models and MCMC</a>
+        </div>
+        <div>
+            We propose new samplers, inspired by MCMC, to enable successful compositional generation. Further, we propose an energy-based parameterization of diffusion models which enables the use of new compositional operators and more sophisticated, Metropolis-corrected samplers.
+        </div>
+        </div>
+        </div>
+          <br>
+
+
+
+
+        <div class="row vspace-top">
+        <div class="col-sm-3">
+            <video width="100%" playsinline="" autoplay="" preload="" muted="">
+                <source src="materials/related/teaser_glide.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-sm-9">
+          <div class="paper-title">
+            <a href="https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/">Compositional Visual Generation with Composable Diffusion Models</a>
+        </div>
+        <div>
+            We present a method to compose different diffusion models together, drawing on the close connection of
+            diffusion models with EBMs. We illustrate how compositional operators enable
+            the ability to composing multiple sets of objects together as well as generate images subject to
+            complex text prompts.
+        </div>
+        </div>
+        </div>
+        <br>
+
+
+        
+
+        <div class="row vspace-top">
+        <div class="col-sm-3">
+            <div class="move-down">
+                <img src="materials/related/diffuser_schematic-01.png" class="img-fluid" alt="comp_carton" style="width:100%">
+            </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="paper-title">
+            <a href="https://diffusion-planning.github.io/">Planning with Diffusion for Flexible Behavior Synthesis</a>
+        </div>
+        <div>
+          Diffuser is a denoising diffusion probabilistic model that plans by iteratively refining randomly sampled noise. The denoising process lends itself to flexible conditioning, by either using gradients of an objective function to bias plans toward high-reward regions or conditioning the plan to reach a specified goal.
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+        </div>
+</section> -->
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- TODO: -->
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2411.07223">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/video-to-action/video-to-action-release" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <div class="content">
+          <p>
+            This website is forked from the
+						<a href="https://nerfies.github.io/">Nerfies</a> and
+						<a href="https://github.com/nerfies/nerfies.github.io">source code</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./static/js/last_run.js"></script>
+
+</body>
+</html>
