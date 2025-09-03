@@ -530,29 +530,29 @@ body {
 }/* 正文样式优化 */
 .content {
     color: #000000 !important;
-    font-size: 1.1em !important;
+    font-size: 1.2em !important;
 }
 
 .content p {
     color: #000000 !important;
-    font-size: 1.1em !important;
+    font-size: 1.2em !important;
     line-height: 1.6 !important;
 }
 
 .readable-line {
     color: #000000 !important;
-    font-size: 1.15em !important;
+    font-size: 1.0em !important;
 }
 
 .section p {
     color: #000000 !important;
-    font-size: 1.1em !important;
+    font-size: 1.2em !important;
     line-height: 1.6 !important;
 }
 
 .section .content {
     color: #000000 !important;
-    font-size: 1.1em !important;
+    font-size: 1.2em !important;
 }
 
 /* 确保标题不受影响 */
@@ -567,7 +567,7 @@ body {
 .readable-line,
 .readable-line p {
     color: #000000 !important;
-    font-size: 1.15em !important;
+    font-size: 1.3em !important;
     line-height: 1.6 !important;
 }
 
@@ -576,13 +576,28 @@ body {
     color: #000000;
 }
 
-p, div:not(.title):not(.subtitle):not(.navbar):not(.footer) {
+p:not(.publication-authors p), div:not(.title):not(.subtitle):not(.navbar):not(.footer):not(.publication-authors):not(.is-size-5) {
     color: #000000 !important;
-    font-size: 1.1em !important;
+    font-size: 0.95em !important;
 }
 
 /* 特定覆盖Experiments部分 */
 .content.has-text-justified {
     color: #000000 !important;
-    font-size: 1.15em !important;
+    font-size: 1.0em !important;
+}
+
+/* 确保作者和单位字体大小不受影响 */
+.publication-authors, .is-size-5 {
+    font-size: 1.5rem !important;
+}
+
+/* 更具体的作者和单位字体保护规则 */
+.publication-authors,
+.publication-authors *,
+.is-size-5,
+.is-size-5 *,
+.author-block,
+.author-block * {
+    font-size: 1.5rem !important;
 }

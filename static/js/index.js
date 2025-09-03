@@ -196,10 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // btn_2.removeEventListener('click');
   console.log(`btn_2: ${btn_2}`)
 
-  btn_2.addEventListener('click', () => {
-    const sectionId = btn_2.getAttribute('video_section');
-    replayVideosInDiv(sectionId, 'seq');
-  });
+  if (btn_2) {
+    btn_2.addEventListener('click', () => {
+      const sectionId = btn_2.getAttribute('video_section');
+      replayVideosInDiv(sectionId, 'seq');
+    });
+  }
 
   // replayButtons_2
   // replayButtons_2.forEach(button => {
@@ -389,3 +391,65 @@ function setupSequentialVideos(options) {
     document.addEventListener('click', unmuteVideos);
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const selectEl = document.getElementById('videoTaskSelect');
+  const titleEl = document.getElementById('interactiveTitle');
+  const videoEl = document.getElementById('interactiveVideo');
+
+  if (!selectEl || !titleEl || !videoEl) {
+    return;
+  }
+
+  const taskToFile = {
+    'Fold the cloth.': 'fold_the_cloth.webm',
+    'Put the bowl into the microwave and close it.': 'put_the_bowl_into_the_microwave_and_close_it.webm',
+    'Put the rag into the trash bin.': 'put_the_rag_into_the_trash_bin.webm',
+    'Pick up the blue bowl and place it on the pink plate.': 'pick_up_the_blue_blow_and_place_it_on_the_pink_plate.webm',
+    'Put the pepper in the basket.': 'put_the_pepper_in_the_basket.webm',
+    'Grab a tissue.': 'grab_a_tissue.webm',
+    'Put the sponge to the plate.': 'put_the_sponge_to_the_plate.webm',
+  };
+
+  function updateInteractiveVideo(taskText) {
+    console.log('[interactive] update called with', taskText);
+    titleEl.textContent = taskText;
+    const filename = taskToFile[taskText];
+    if (!filename) {
+      console.warn('[interactive] no filename mapping for task', taskText);
+      return;
+    }
+    const newSrc = `./materials/real_world_exp/${filename}`;
+    console.log('[interactive] newSrc', newSrc);
+    if (videoEl.getAttribute('src') === newSrc) {
+      console.log('[interactive] src unchanged');
+      return;
+    }
+
+    // Prepare a one-time error fallback from .webm to .mp4
+    const onError = () => {
+      videoEl.removeEventListener('error', onError);
+      if (newSrc.endsWith('.webm')) {
+        const fallback = newSrc.replace('.webm', '.mp4');
+        console.warn('[interactive] webm failed, trying mp4', fallback);
+        videoEl.setAttribute('src', fallback);
+        videoEl.load();
+        videoEl.play().catch((err) => { console.log('[interactive] fallback play blocked', err); });
+      }
+    };
+    videoEl.addEventListener('error', onError, { once: true });
+
+    videoEl.pause();
+    videoEl.currentTime = 0;
+    videoEl.setAttribute('src', newSrc);
+    videoEl.load();
+    videoEl.play().catch((err) => { console.log('[interactive] play blocked', err); });
+  }
+
+  // Initialize based on current select value
+  updateInteractiveVideo(selectEl.value);
+
+  const onSelect = (value) => updateInteractiveVideo(value);
+  selectEl.addEventListener('change', (e) => onSelect(e.target.value));
+  selectEl.addEventListener('input', (e) => onSelect(e.target.value));
+});

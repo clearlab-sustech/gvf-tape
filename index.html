@@ -102,7 +102,7 @@
             &nbsp;
             <img src="static/MIT-logo.svg" width="80px"> -->
 
-            <br> CORL 2025 (Poster)
+            <br> <b> CORL 2025 (Poster)</b>
 
             <br><small style="color: gray;">* Equal contribution; order by dice rolling.</small>
             <br><small style="color: gray;"> † The corresponding authors. </small>
@@ -118,12 +118,12 @@
               <!-- Arxiv -->
               <span class="link-block">
                 <!-- TODO: Add arXiv link -->
-                <a href=""
+                <a href="http://arxiv.org/abs/2509.00361"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv(Coming Soon)</span>
+                  <span>arXiv</span>
                 </a>
               </span>
 
@@ -193,23 +193,19 @@
               allowfullscreen>
             </iframe>
           </div>
-          <p style="text-align: center; margin-top: 15px; font-style: italic; color: #666;">
-            <!-- Optional caption for your video -->
+          <p class="readable-line" style="text-align: justify; margin-top: 15px; max-width: 1200px; font-style: italic; color: #666;">
+          <b>GVF-<span style="color: #974F9F;">TA</span><span style="color: #4A7CB4;">P</span><span style="color: #67AC55;">E</span> Overview. 
+  </b>
+    Our approach combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation across diverse table-top tasks.
+    Given a RGB observation and a task description, GVF-TAPE predicts future RGB-D frames via a generative foresight model.
+    A decoupled pose estimator then extracts end-effector poses from the predicted frames, translating them into executable commands via low-level controllers.
+ 
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<div class="columns is-centered has-text-centered">
-  <p style="text-align: justify; margin-top: -40px;  max-width: 1200px;  font-style: italic;color: #000000;" class="readable-line">
-    <b>GVF-<span style="color: #974F9F;">TA</span><span style="color: #4A7CB4;">P</span><span style="color: #67AC55;">E</span> Overview. 
-  </b>
-    Our approach combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation across diverse table-top tasks.
-    Given a RGB observation and a task description, GVF-TAPE predicts future RGB-D frames via a generative foresight model.
-    A decoupled pose estimator then extracts end-effector poses from the predicted frames, translating them into executable commands via low-level controllers.
-  </p>
-</div>
 <hr>
 
 
@@ -285,113 +281,68 @@ the predicted trajectory, the system receives a new observation and repeats the 
         <div class="content has-text-justified">
           <p style="color: #000000;">
 This section presents real-world experiments demonstrating the effectiveness of GVF-TAPE. In all videos, the left column shows the real-world rollout, the middle column depicts the generated RGB visual foresight, and the right column displays the generated depth map.
-          <\p>
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="margin-top:-50px">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <div class="content has-text-justified">
-        <h2 class="title is-3; font-size:1.2rem">Fold the cloth.</h2>
-          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-          <video 
-            src="./materials/real_world_exp/fold_the_cloth.webm"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
+          <div style="display:flex; align-items:center; gap:12px; justify-content:center; flex-wrap:wrap">
+            <label for="videoTaskSelect" style="font-weight:600; font-size: 20px; color:#000000;">Task:</label>
+            <select id="videoTaskSelect" style="padding:6px 10px; font-size: 20px; border:1px solid #ccc; border-radius:6px;">
+              <option value="./materials/real_world_exp/fold_the_cloth.webm">Fold the cloth.</option>
+              <option value="./materials/real_world_exp/put_the_bowl_into_the_microwave_and_close_it.webm">Put the bowl into the microwave and close it.</option>
+              <option value="./materials/real_world_exp/put_the_rag_into_the_trash_bin.webm">Put the rag into the trash bin.</option>
+              <option value="./materials/real_world_exp/pick_up_the_blue_blow_and_place_it_on_the_pink_plate.webm">Pick up the blue bowl and place it on the pink plate.</option>
+              <option value="./materials/real_world_exp/put_the_pepper_in_the_basket.webm">Put the pepper in the basket.</option>
+              <option value="./materials/real_world_exp/grab_a_tissue.webm">Grab a tissue.</option>
+              <option value="./materials/real_world_exp/put_the_sponge_to_the_plate.webm">Put the sponge to the plate.</option>
+            </select>
           </div>
 
-          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the bowl into the microwave and close it.</h2>
+          <h2 id="interactiveTitle" class="title is-3; font-size:1.2rem; margin-top:1.2rem" style="margin-top: 1.2rem;">Fold the cloth.</h2>
           <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-          <video 
-            src="./materials/real_world_exp/put_the_bowl_into_the_microwave_and_close_it.webm"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
-          </div>
-
-          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the rag into the trash bin.</h2>
-          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-          <video 
-            src="./materials/real_world_exp/put_the_rag_into_the_trash_bin.webm"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
-          </div>
-
-          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Pick up the blue bowl and place it on the pink plate.</h2>
-          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-          <video 
-            src="./materials/real_world_exp/pick_up_the_blue_blow_and_place_it_on_the_pink_plate.webm"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
-          </div>
-
-          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the pepper in the basket.</h2>
-          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-          <video 
-            src="./materials/real_world_exp/put_the_pepper_in_the_basket.webm"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
-          </div>
-
-          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Grab a tissue.</h2>
-          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-          <video 
-            src="./materials/real_world_exp/grab_a_tissue.webm"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
-          </div>
-
-          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the sponge to the plate.</h2>
-          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-          <video 
-            src="./materials/real_world_exp/put_the_sponge_to_the_plate.webm"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
+            <video 
+              id="interactiveVideo"
+              src="./materials/real_world_exp/fold_the_cloth.webm"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+              controls
+              muted
+              loop
+              playsinline>
+              您的浏览器不支持HTML5视频播放
+            </video>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const selectEl = document.getElementById('videoTaskSelect');
+  const videoEl = document.getElementById('interactiveVideo');
+  const titleEl = document.getElementById('interactiveTitle');
+
+  selectEl.addEventListener('change', function () {
+    const selectedOption = this.options[this.selectedIndex];
+    const videoSrc = selectedOption.value;
+    const taskText = selectedOption.text;
+
+    // 更新视频和标题
+    videoEl.src = videoSrc;
+    titleEl.textContent = taskText;
+
+    // 自动播放
+    videoEl.play();
+  });
+</script>
 
 <hr>
 
