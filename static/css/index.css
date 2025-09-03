@@ -513,3 +513,76 @@ body {
   .figure:hover img.Sirv.image-hover {
     opacity: 1;
   }
+
+/* Utility: constrain readable line length */
+.readable-line {
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .readable-line {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}/* 正文样式优化 */
+.content {
+    color: #000000 !important;
+    font-size: 1.1em !important;
+}
+
+.content p {
+    color: #000000 !important;
+    font-size: 1.1em !important;
+    line-height: 1.6 !important;
+}
+
+.readable-line {
+    color: #000000 !important;
+    font-size: 1.15em !important;
+}
+
+.section p {
+    color: #000000 !important;
+    font-size: 1.1em !important;
+    line-height: 1.6 !important;
+}
+
+.section .content {
+    color: #000000 !important;
+    font-size: 1.1em !important;
+}
+
+/* 确保标题不受影响 */
+.title, .subtitle, h1, h2, h3, h4, h5, h6 {
+    color: inherit !important;
+}
+/* 更强的正文样式规则 */
+.content.has-text-justified,
+.content.has-text-justified p,
+.section .content,
+.section .content p,
+.readable-line,
+.readable-line p {
+    color: #000000 !important;
+    font-size: 1.15em !important;
+    line-height: 1.6 !important;
+}
+
+/* 覆盖所有可能的正文文本 */
+body {
+    color: #000000;
+}
+
+p, div:not(.title):not(.subtitle):not(.navbar):not(.footer) {
+    color: #000000 !important;
+    font-size: 1.1em !important;
+}
+
+/* 特定覆盖Experiments部分 */
+.content.has-text-justified {
+    color: #000000 !important;
+    font-size: 1.15em !important;
+}

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Project Page for Generative Visual Foresight Meets Task-Agnostic Pose Estimation in Robotic Table-top Manipulation.">
+  <meta name="keywords" content="Embodied AI, Artificial Intelligence, Machine Learning, Diffusion Model, Decision Making, Robotics, Video Model, Behavior Cloning, Pose Estimation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TODO: -->
+  <!-- TODO: -->
+  <meta name="author" content="Chuye Zhang, Xiaoxiong Zhang, Wei Pan, Linfang Zheng, Wei Zhang">
+  <!-- TODO: -->
+  <!-- TODO: -->
+  <title>Generative Visual Foresight Meets Task-Agnostic Pose Estimation in Robotic Table-top Manipulation</title>
+
+  <!-- TODO: -->
+  <!-- TODO: -->
+  <!-- <meta name="google-site-verification" content="luiKJ6NTZHsgoD15xoPljBeAHAgSwMOoXhBmQG8-LQ8" /> -->
+  <!-- TODO: -->
+  <!-- TODO: -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="load-mathjax.js" async></script>
+
+  <link rel="stylesheet" href="./static/css/splide.min.css">
+  <script src="./static/js/splide.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="./materials/favicon.ico" />
+
+</head>
+
+<body>
+
+<!-- TODO: -->
+<!-- Navigation Bar -->
+
+<!-- style="margin-bottom: 10px; padding-bottom: 10px" -->
+<!-- style="margin-bottom: 0px; padding-bottom: 0px" -->
+<section class="hero" style="background-color: #fbecdd;">
+  <div class="hero-body hero-body-dec19" >
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- is-1 or is-2 -->
+          <h1 class="title publication-title" style="font-size: 43px;">
+            <!-- Grounding Video Models to Actions through Goal Conditioned Exploration</h1> -->
+            Generative Visual Foresight Meets <br> 
+            <span style="color: #974F9F;">Task-Agnostic</span> 
+            <span style="color: #4A7CB4;">Pose</span> 
+            <span style="color: #67AC55;">Estimation</span> 
+              in Robotic Table-top Manipulation </h1>
+
+            <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhangchuye.github.io/">Chuye Zhang</a><sup>* 1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xiaoxiongzzzz.github.io/">Xiaoxiong Zhang</a><sup>* 1</sup>
+            </span>
+              <span class="author-block">
+                <a href="https://weisonweileen.github.io/#/">Wei Pan</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://lynne-zheng-linfang.github.io/">Linfang Zheng</a><sup>† 2,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://faculty.sustech.edu.cn/?tagid=zhangw3&go=2">Wei Zhang</a><sup>† 1,2</sup>
+              </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <!-- <img src="static/Brown-logo-crop.png" width="20px"> -->
+              <!-- <sup>1</sup>Georgia Institute of Technology, University -->
+              <sup>1</sup>Southern University of Science and Technology,
+              <sup>2</sup>LimX Dynamics,
+              <sup>3</sup>The University of Hong Kong
+            </span>
+            <!-- &nbsp; -->
+            <!-- <span class="author-block"> -->
+              <!-- <img src="static/MIT_logo.svg" width="40px"> -->
+              <!-- <sup>2</sup>MIT -->
+            <!-- </span> -->
+
+            <!-- <br>
+            <img src="static/Brown-logo.png" width="110px">
+            &nbsp;
+            &nbsp;
+            <img src="static/MIT-logo.svg" width="80px"> -->
+
+            <br> CORL 2025 (Poster)
+
+            <br><small style="color: gray;">* Equal contribution; order by dice rolling.</small>
+            <br><small style="color: gray;"> † The corresponding authors. </small>
+            <!-- <br>
+            <img src="static/Brown-logo.png" width="190px">
+            &nbsp;
+            &nbsp;
+            <img src="static/MIT-logo.svg" width="135px"> -->
+
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv -->
+              <span class="link-block">
+                <!-- TODO: Add arXiv link -->
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv(Coming Soon)</span>
+                </a>
+              </span>
+
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2411.07223"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+
+              
+
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/video-to-action/video-to-action-release"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Exploration Code</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-file-video"></i>
+                  </span>
+                  <span>Code(Coming Soon)</span>
+                </a>
+              </span>
+
+              <!-- <span class="link-block">
+                <a href="https://colab.research.google.com/drive/1pARD89PfSzF3Ml6virZjztEJKWhXVkBY?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img width="20px" src="static/google-colab-32.png">
+                  </span>
+                  <span>Colab</span>
+                </a>
+              </span> -->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+            <iframe 
+              src="https://www.youtube.com/embed/fGzu_huiuvE" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+              frameborder="0" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p style="text-align: center; margin-top: 15px; font-style: italic; color: #666;">
+            <!-- Optional caption for your video -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="columns is-centered has-text-centered">
+  <p style="text-align: justify; margin-top: -40px;  max-width: 1200px;  font-style: italic;color: #000000;" class="readable-line">
+    <b>GVF-<span style="color: #974F9F;">TA</span><span style="color: #4A7CB4;">P</span><span style="color: #67AC55;">E</span> Overview. 
+  </b>
+    Our approach combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation across diverse table-top tasks.
+    Given a RGB observation and a task description, GVF-TAPE predicts future RGB-D frames via a generative foresight model.
+    A decoupled pose estimator then extracts end-effector poses from the predicted frames, translating them into executable commands via low-level controllers.
+  </p>
+</div>
+<hr>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+
+            Robotic manipulation in unstructured environments requires systems that can generalize across diverse tasks while maintaining robust and reliable performance. 
+            We introduce GVF-TAPE, a closed-loop framework that combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation. 
+            GVF-TAPE employs a generative video model to predict future RGB-D frames from a single side-view RGB image and a task description, offering visual plans that guide robot actions. 
+            A decoupled pose estimation model then extracts end-effector poses from the predicted frames, translating them into executable commands via low-level controllers. 
+            By iteratively integrating video foresight and pose estimation in a closed loop, GVF-TAPE achieves real-time, adaptive manipulation across a broad range of tasks. 
+            Extensive experiments in both simulation and real-world settings demonstrate that our approach reduces reliance on task-specific action data and generalizes effectively, providing a practical and scalable solution for intelligent robotic systems.
+            
+          </p>
+        </div>
+
+
+        <!-- <figure>
+          <img width="75%" src="materials/1-teaser-v4-for-web.png" style="min-width: 200px">
+        <p class="caption">
+            <b>Method Overview.</b>
+            Our approach learns to ground a large pretrained video model into continuous actions through goal-directed exploration in an environment. 
+            Given a synthesized video, a goal-conditioned policy attempts to reach each visual goal in the video, 
+            with data in the resulting real-world execution saved in a replay buffer to train the goal-conditioned policy.
+        </p>
+      </figure> -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Framework</h2>
+        <div class="content has-text-justified">
+          <div class="pdf-container" style="border: 1px solid #000000; border-radius: 8px; overflow: hidden; background: #fff;">
+            <a href="./materials/system.png" target="_blank" style="display:block;">
+              <img src="./materials/system.png" alt="Method Framework" style="display:block; width:100%; height:auto; background:#fff;">
+            </a>
+            </div>
+          <p style="text-align: justify; margin-top: 10px; font-style: italic; color: #000000;">
+            <b>Framework Overview.</b>GVF-TAPE first generates a future RGB-D video conditioned on the current
+RGB observation and task description. A transformer-based pose estimation model then extracts the end-
+effector pose from each predicted frame and sends it to a low-level controller for execution. After completing
+the predicted trajectory, the system receives a new observation and repeats the process in a closed-loop manner.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+This section presents real-world experiments demonstrating the effectiveness of GVF-TAPE. In all videos, the left column shows the real-world rollout, the middle column depicts the generated RGB visual foresight, and the right column displays the generated depth map.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section; margin-top:10px">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+        <h2 class="title is-3; font-size:1.2rem">Fold the cloth.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/fold_the_cloth.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the bowl into the microwave and close it.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_bowl_into_the_microwave_and_close_it.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the rag into the trash bin.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_rag_into_the_trash_bin.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Pick up the blue bowl and place it on the pink plate.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/pick_up_the_blue_blow_and_place_it_on_the_pink_plate.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the pepper in the basket.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_pepper_in_the_basket.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Grab a tissue.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/grab_a_tissue.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the sponge to the plate.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_sponge_to_the_plate.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section; margin-top:10px">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3; font-size:1.2rem">Random Exploration Video</h2>
+        <div class="content has-text-justified">
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 56.3%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          Our method leverages random exploration to learn a task-agnostic pose estimation model that maps generated frames to robot actions, without relying on action-labeled data.
+          This process is human-free and thus highly efficient.
+          Below, we present a real-world random exploration video.
+            <video 
+            src="./materials/real_world_exp/random_exploration.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present GVF-TAPE, a real-time manipulation framework that decouples visual planning from action execution by combining generative video prediction with task-agnostic pose estimation. Unlike prior methods, GVF-TAPE learns from unlabeled videos and random exploration, removing the need for action-labeled data. This design allows robots to predict future visual outcomes and infer executable poses, enabling robust closed-loop control across diverse tasks. Experiments in both simulation and the real world show that GVF-TAPE outperforms action-supervised and video-based baselines, demonstrating the potential of label-free, foresight-driven frameworks for scalable manipulation. We hope this work encourages further research in video-guided, action-free robot learning.
+
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- TODO: IMPORTANT -->
+<!-- <hr>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content column is-full-width ">
+    <h2 class="title is-4">BibTeX</h2>
+    <pre><code>@article{luo2024grounding,
+      title={Grounding Video Models to Actions through Goal Conditioned Exploration},
+      author={Luo, Yunhao and Du, Yilun},
+      journal={arXiv preprint arXiv:2411.07223},
+      year={2024}
+    }
+</code></pre>
+  </div>
+</section> -->
+
+
+
+<!-- <section class="section">
+        <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Related Projects</h2>
+          Check out a list of our related papers on compositional generation and energy based models. A full list can be found <a href="https://energy-based-model.github.io/Energy-based-Model-MIT/">here</a>!
+          <br>
+          <br>
+        <div class="row vspace-top">
+        <div class="col-sm-3">
+            <video width="100%" playsinline="" autoplay="" preload="" muted="">
+                <source src="materials/related/recyle.m4v" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-sm-9">
+          <div class="paper-title">
+            <a href="https://energy-based-model.github.io/reduce-reuse-recycle/">Reduce, Reuse, Recycle: Compositional Generation with Energy-Based Diffusion Models and MCMC</a>
+        </div>
+        <div>
+            We propose new samplers, inspired by MCMC, to enable successful compositional generation. Further, we propose an energy-based parameterization of diffusion models which enables the use of new compositional operators and more sophisticated, Metropolis-corrected samplers.
+        </div>
+        </div>
+        </div>
+          <br>
+
+
+
+
+        <div class="row vspace-top">
+        <div class="col-sm-3">
+            <video width="100%" playsinline="" autoplay="" preload="" muted="">
+                <source src="materials/related/teaser_glide.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-sm-9">
+          <div class="paper-title">
+            <a href="https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/">Compositional Visual Generation with Composable Diffusion Models</a>
+        </div>
+        <div>
+            We present a method to compose different diffusion models together, drawing on the close connection of
+            diffusion models with EBMs. We illustrate how compositional operators enable
+            the ability to composing multiple sets of objects together as well as generate images subject to
+            complex text prompts.
+        </div>
+        </div>
+        </div>
+        <br>
+
+
+        
+
+        <div class="row vspace-top">
+        <div class="col-sm-3">
+            <div class="move-down">
+                <img src="materials/related/diffuser_schematic-01.png" class="img-fluid" alt="comp_carton" style="width:100%">
+            </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="paper-title">
+            <a href="https://diffusion-planning.github.io/">Planning with Diffusion for Flexible Behavior Synthesis</a>
+        </div>
+        <div>
+          Diffuser is a denoising diffusion probabilistic model that plans by iteratively refining randomly sampled noise. The denoising process lends itself to flexible conditioning, by either using gradients of an objective function to bias plans toward high-reward regions or conditioning the plan to reach a specified goal.
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+        </div>
+</section> -->
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- TODO: -->
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2411.07223">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/video-to-action/video-to-action-release" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <div class="content">
+          <p>
+            This website is forked from the
+						<a href="https://nerfies.github.io/">Nerfies</a> and
+						<a href="https://github.com/nerfies/nerfies.github.io">source code</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./static/js/last_run.js"></script>
+
+</body>
+</html>

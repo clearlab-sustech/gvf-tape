@@ -69,16 +69,16 @@
               <a href="https://zhangchuye.github.io/">Chuye Zhang</a><sup>* 1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Xiaoxiong Zhang</a><sup>* 1</sup>
+              <a href="https://xiaoxiongzzzz.github.io/">Xiaoxiong Zhang</a><sup>* 1</sup>
             </span>
               <span class="author-block">
-                <a href="">Wei Pan</a><sup>1</sup>,
+                <a href="https://weisonweileen.github.io/#/">Wei Pan</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="">Linfang Zheng</a><sup>† 2,3</sup>,
+                <a href="https://lynne-zheng-linfang.github.io/">Linfang Zheng</a><sup>† 2,3</sup>,
               </span>
               <span class="author-block">
-                <a href="">Wei Zhang</a><sup>† 1,2</sup>
+                <a href="https://faculty.sustech.edu.cn/?tagid=zhangw3&go=2">Wei Zhang</a><sup>† 1,2</sup>
               </span>
           </div>
 
@@ -104,6 +104,8 @@
 
             <br> CORL 2025 (Poster)
 
+            <br><small style="color: gray;">* Equal contribution; order by dice rolling.</small>
+            <br><small style="color: gray;"> † The corresponding authors. </small>
             <!-- <br>
             <img src="static/Brown-logo.png" width="190px">
             &nbsp;
@@ -178,15 +180,46 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+            <iframe 
+              src="https://www.youtube.com/embed/fGzu_huiuvE" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+              frameborder="0" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p style="text-align: center; margin-top: 15px; font-style: italic; color: #666;">
+            <!-- Optional caption for your video -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="columns is-centered has-text-centered">
+  <p style="text-align: justify; margin-top: -40px;  max-width: 1200px;  font-style: italic;color: #000000;" class="readable-line">
+    <b>GVF-<span style="color: #974F9F;">TA</span><span style="color: #4A7CB4;">P</span><span style="color: #67AC55;">E</span> Overview. 
+  </b>
+    Our approach combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation across diverse table-top tasks.
+    Given a RGB observation and a task description, GVF-TAPE predicts future RGB-D frames via a generative foresight model.
+    A decoupled pose estimator then extracts end-effector poses from the predicted frames, translating them into executable commands via low-level controllers.
+  </p>
+</div>
+<hr>
+
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-full-width"> -->
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
+          <p style="color: #000000;">
 
             Robotic manipulation in unstructured environments requires systems that can generalize across diverse tasks while maintaining robust and reliable performance. 
             We introduce GVF-TAPE, a closed-loop framework that combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation. 
@@ -218,16 +251,179 @@
 
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Framework</h2>
+        <div class="content has-text-justified">
+          <div class="pdf-container" style="border: 1px solid #000000; border-radius: 8px; overflow: hidden; background: #fff;">
+            <a href="./materials/system.png" target="_blank" style="display:block;">
+              <img src="./materials/system.png" alt="Method Framework" style="display:block; width:100%; height:auto; background:#fff;">
+            </a>
+            </div>
+          <p style="text-align: justify; margin-top: 10px; font-style: italic; color: #000000;">
+            <b>Framework Overview.</b>GVF-TAPE first generates a future RGB-D video conditioned on the current
+RGB observation and task description. A transformer-based pose estimation model then extracts the end-
+effector pose from each predicted frame and sends it to a low-level controller for execution. After completing
+the predicted trajectory, the system receives a new observation and repeats the process in a closed-loop manner.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+<hr>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p style="color: #000000;">
+This section presents real-world experiments demonstrating the effectiveness of GVF-TAPE. In all videos, the left column shows the real-world rollout, the middle column depicts the generated RGB visual foresight, and the right column displays the generated depth map.
+          <\p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section" style="margin-top:-50px">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+        <h2 class="title is-3; font-size:1.2rem">Fold the cloth.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/fold_the_cloth.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
 
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the bowl into the microwave and close it.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_bowl_into_the_microwave_and_close_it.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
 
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the rag into the trash bin.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_rag_into_the_trash_bin.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
 
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Pick up the blue bowl and place it on the pink plate.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/pick_up_the_blue_blow_and_place_it_on_the_pink_plate.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
 
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the pepper in the basket.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_pepper_in_the_basket.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
 
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Grab a tissue.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/grab_a_tissue.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
 
+          <h2 class="title is-3; font-size:1.2rem; margin-top:1.2rem">Put the sponge to the plate.</h2>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <video 
+            src="./materials/real_world_exp/put_the_sponge_to_the_plate.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section" style="margin-top:10px">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3; font-size:1.2rem">Random Exploration Video</h2>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 20px; color: #000000;">
+          Our method leverages random exploration to learn a task-agnostic pose estimation model that maps generated frames to robot actions, without relying on action-labeled data.
+          This process is human-free and thus highly efficient.
+          Below, we present a real-world random exploration video.
+          </p>
+          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 56.3%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+            <video 
+            src="./materials/real_world_exp/random_exploration.webm"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            controls
+            muted
+            loop
+            playsinline>
+            您的浏览器不支持HTML5视频播放
+          </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -235,7 +431,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Conclusion</h2>
         <div class="content has-text-justified">
-          <p>
+          <p style="color: #000000;">
             We present GVF-TAPE, a real-time manipulation framework that decouples visual planning from action execution by combining generative video prediction with task-agnostic pose estimation. Unlike prior methods, GVF-TAPE learns from unlabeled videos and random exploration, removing the need for action-labeled data. This design allows robots to predict future visual outcomes and infer executable poses, enabling robust closed-loop control across diverse tasks. Experiments in both simulation and the real world show that GVF-TAPE outperforms action-supervised and video-based baselines, demonstrating the potential of label-free, foresight-driven frameworks for scalable manipulation. We hope this work encourages further research in video-guided, action-free robot learning.
 
             
