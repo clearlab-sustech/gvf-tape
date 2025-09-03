@@ -294,8 +294,8 @@ This section presents real-world experiments demonstrating the effectiveness of 
       <div class="column is-full-width">
         <div class="content has-text-justified">
           <div style="display:flex; align-items:center; gap:12px; justify-content:center; flex-wrap:wrap">
-            <label for="videoTaskSelect" style="font-weight:600; font-size: 20px; color:#000000;">Task:</label>
-            <select id="videoTaskSelect" style="padding:6px 10px; font-size: 20px; border:1px solid #ccc; border-radius:6px;">
+            <label for="videoTaskSelect" style="font-weight:600; font-size: 24px; color:#000000;">Task:</label>
+            <select id="videoTaskSelect" style="padding:6px 10px; font-size: 24px; border:1px solid #ccc; border-radius:6px;">
               <option value="./materials/real_world_exp/fold_the_cloth.webm">Fold the cloth.</option>
               <option value="./materials/real_world_exp/put_the_bowl_into_the_microwave_and_close_it.webm">Put the bowl into the microwave and close it.</option>
               <option value="./materials/real_world_exp/put_the_rag_into_the_trash_bin.webm">Put the rag into the trash bin.</option>
@@ -306,7 +306,7 @@ This section presents real-world experiments demonstrating the effectiveness of 
             </select>
           </div>
 
-          <h2 id="interactiveTitle" class="title is-3; font-size:1.2rem; margin-top:1.2rem" style="margin-top: 1.2rem;">Fold the cloth.</h2>
+          <!-- <h2 id="interactiveTitle" class="title is-3; font-size:1.2rem; margin-top:1.2rem" style="margin-top: 1.2rem;">Fold the cloth.</h2> -->
           <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
             <video 
               id="interactiveVideo"
@@ -337,7 +337,7 @@ This section presents real-world experiments demonstrating the effectiveness of 
 
     // 更新视频和标题
     videoEl.src = videoSrc;
-    titleEl.textContent = taskText;
+    // titleEl.textContent = taskText;
 
     // 自动播放
     videoEl.play();
