@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clearlab-sustech.github.io/gvf-tape/sitemap.xml
+
