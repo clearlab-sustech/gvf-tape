@@ -190,27 +190,31 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <div class="content has-text-justified">
-          <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
-            <iframe 
-              src="https://www.youtube.com/embed/fGzu_huiuvE" 
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-              frameborder="0" 
-              allowfullscreen>
-            </iframe>
+        <div class="content has-text-justified" style="max-width: 80.9%; margin: 0 auto;">
+
+          <div class="video-container" 
+               style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; border-radius: 0px; margin: 20px 0;">
+                <iframe
+                src="https://www.youtube.com/embed/fGzu_huiuvE?rel=0&modestbranding=1&showinfo=0&controls=1&fs=1&color=white&vq=hd1080"
+                style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+                </iframe>
           </div>
-          <p class="readable-line" style="text-align: justify; margin-top: 15px; max-width: 1200px;  color: #666;">
-          <b>GVF-<span style="color: #974F9F;">TA</span><span style="color: #4A7CB4;">P</span><span style="color: #67AC55;">E</span> Overview. 
-  </b>
-    Our approach combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation across diverse table-top tasks.
-    Given a RGB observation and a task description, GVF-TAPE predicts future RGB-D frames via a generative foresight model.
-    A decoupled pose estimator then extracts end-effector poses from the predicted frames, translating them into executable commands via low-level controllers.
- 
+
+          <p style="text-align: justify; margin-top: 15px; color: #555; font-size: 1rem; line-height: 1.7;">
+            <b>GVF-<span style="color: #974F9F;">TA</span><span style="color: #4A7CB4;">P</span><span style="color: #67AC55;">E</span> Overview.</b>
+            Our approach combines generative visual foresight with task-agnostic pose estimation to enable scalable robotic manipulation across diverse table-top tasks.
+            Given an RGB observation and a task description, GVF-TAPE predicts future RGB-D frames via a generative foresight model.
+            A decoupled pose estimator then extracts end-effector poses from the predicted frames, translating them into executable commands via low-level controllers.
           </p>
+
         </div>
       </div>
     </div>
@@ -219,12 +223,15 @@
 <hr>
 
 
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <!-- <h2 class="title is-3">Abstract</h2> -->
+        <h2 class="title is-3" style="margin-bottom: 1.2em;">Abstract</h2>
+        <div class="content has-text-justified" style="max-width: 80%; margin: 0 auto;">
           <p style="color: #000000;">
 
             Robotic manipulation in unstructured environments requires systems that can generalize across diverse tasks while maintaining robust and reliable performance. 
@@ -257,23 +264,26 @@
 
 
 
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Method Framework</h2>
         <div class="content has-text-justified">
-          <div class="pdf-container" style="border: 1px solid #ffffff; border-radius: 8px; overflow: hidden; background: #fff;">
-            <a href="./materials/system.png" target="_blank" style="display:block;">
-              <img src="./materials/system.png" alt="Method Framework" style="display:block; width:100%; height:auto; background:#fff;">
-            </a>
+          <div style="max-width: 80%; margin: 0 auto;">
+            <div class="pdf-container" style="border: 1px solid #ffffff; border-radius: 8px; overflow: hidden; background: #fff;">
+              <img src="./materials/real_world_exp/framework_ani.gif" alt="Method Framework" style="display:block; width:100%; height:auto; background:#fff;">
             </div>
-          <p style="text-align: justify; margin-top: 10px;  color: #000000;">
-            <b>Framework Overview.</b>GVF-TAPE first generates a future RGB-D video conditioned on the current
+            <p style="text-align: justify; margin-top: -40px; max-width: 100%; color: #000000;">
+              <b>Framework Overview.</b>GVF-TAPE first generates a future RGB-D video conditioned on the current
 RGB observation and task description. A transformer-based pose estimation model then extracts the end-
 effector pose from each predicted frame and sends it to a low-level controller for execution. After completing
 the predicted trajectory, the system receives a new observation and repeats the process in a closed-loop manner.
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -288,7 +298,7 @@ the predicted trajectory, the system receives a new observation and repeats the 
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Experiments</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="max-width: 80%; margin: 0 auto;">
           <p style="color: #000000;">
 This section presents real-world experiments demonstrating the effectiveness of GVF-TAPE. In all videos, the left column shows the real-world rollout, the middle column depicts the generated RGB visual foresight, and the right column displays the generated depth map.
           </p>
@@ -317,18 +327,18 @@ This section presents real-world experiments demonstrating the effectiveness of 
           </div>
 
           <!-- <h2 id="interactiveTitle" class="title is-3; font-size:1.2rem; margin-top:1.2rem" style="margin-top: 1.2rem;">Fold the cloth.</h2> -->
-          <div class="video-container" style="position: relative; object-fit: cover; padding-bottom: 25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px 0;">
+          <div class="video-container" style="max-width: 80%; margin: 45px auto; overflow: hidden; border-radius: 10px;">
             <video 
               id="interactiveVideo"
               src="./materials/real_world_exp/put_the_bowl_into_the_microwave_and_close_it.webm"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+              style="width: 100%; height: auto; display: block; object-fit: cover;"
               controls
               muted
               loop
               playsinline>
               您的浏览器不支持HTML5视频播放
             </video>
-          </div>
+          </div>          
         </div>
       </div>
     </div>
@@ -355,28 +365,24 @@ This section presents real-world experiments demonstrating the effectiveness of 
 </script>
 
 <hr>
+<!-- src="./materials/real_world_exp/random_exploration.webm" -->
 
 <section class="section" style="margin-top:10px">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3; font-size:1.2rem">Random Exploration Video</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="max-width: 80%; margin: 0 auto;">
           <p style="margin-bottom: 40px; color: #000000;">
           Our method leverages random exploration to learn a task-agnostic pose estimation model that maps generated frames to robot actions, without relying on action-labeled data.
           This process is human-free and thus highly efficient.
           Below, we present a real-world random exploration video.
           </p>
-          <div style="position: relative; object-fit: cover; width: 100%; height: auto; overflow: hidden; max-width: 100%; background: #000; margin-top: 20px;">
-            <video 
-            src="./materials/real_world_exp/random_exploration.webm"
-            style=" width:100%; height: auto; display: block;"
-            controls
-            muted
-            loop
-            playsinline>
-            您的浏览器不支持HTML5视频播放
-          </video>
+          <div style="position: relative; object-fit: cover; width: 75.8%; height: auto; overflow: hidden; max-width: 75.8%; background: #000; margin: 20px auto 0 auto;">
+            <img 
+            src="./materials/real_world_exp/play_4_grid.gif"
+            alt="Random Exploration Video"
+            style="width:100%; height: auto; display: block; margin: 0 auto;">
           </div>
         </div>
       </div>
@@ -391,7 +397,7 @@ This section presents real-world experiments demonstrating the effectiveness of 
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Conclusion</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="max-width: 80%; margin: 0 auto;">
           <p style="color: #000000;">
             We present GVF-TAPE, a real-time manipulation framework that decouples visual planning from action execution by combining generative video prediction with task-agnostic pose estimation. Unlike prior methods, GVF-TAPE learns from unlabeled videos and random exploration, removing the need for action-labeled data. This design allows robots to predict future visual outcomes and infer executable poses, enabling robust closed-loop control across diverse tasks. Experiments in both simulation and the real world show that GVF-TAPE outperforms action-supervised and video-based baselines, demonstrating the potential of label-free, foresight-driven frameworks for scalable manipulation. We hope this work encourages further research in video-guided, action-free robot learning.
 
@@ -406,96 +412,23 @@ This section presents real-world experiments demonstrating the effectiveness of 
 
 
 
-
-<!-- TODO: IMPORTANT -->
-<!-- <hr>
-
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content column is-full-width ">
-    <h2 class="title is-4">BibTeX</h2>
-    <pre><code>@article{luo2024grounding,
-      title={Grounding Video Models to Actions through Goal Conditioned Exploration},
-      author={Luo, Yunhao and Du, Yilun},
-      journal={arXiv preprint arXiv:2411.07223},
-      year={2024}
-    }
-</code></pre>
+  <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">BibTeX</h2>
   </div>
-</section> -->
+  <div style="max-width: 80%; margin: 0 auto;">
+    <pre><code>@article{gvf-tape,
+      title={Generative Visual Foresight Meets Task-Agnostic Pose Estimation in Robotic Table-Top Manipulation}, 
+      author={Chuye Zhang and Xiaoxiong Zhang and Wei Pan and Linfang Zheng and Wei Zhang},
+      journal={arXiv preprint arXiv:2509.00361},
+      year={2025},
+    }
+  </code></pre>
+  </div>
+  </div>
+</section>
 
-
-
-<!-- <section class="section">
-        <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-4">Related Projects</h2>
-          Check out a list of our related papers on compositional generation and energy based models. A full list can be found <a href="https://energy-based-model.github.io/Energy-based-Model-MIT/">here</a>!
-          <br>
-          <br>
-        <div class="row vspace-top">
-        <div class="col-sm-3">
-            <video width="100%" playsinline="" autoplay="" preload="" muted="">
-                <source src="materials/related/recyle.m4v" type="video/mp4">
-            </video>
-        </div>
-        <div class="col-sm-9">
-          <div class="paper-title">
-            <a href="https://energy-based-model.github.io/reduce-reuse-recycle/">Reduce, Reuse, Recycle: Compositional Generation with Energy-Based Diffusion Models and MCMC</a>
-        </div>
-        <div>
-            We propose new samplers, inspired by MCMC, to enable successful compositional generation. Further, we propose an energy-based parameterization of diffusion models which enables the use of new compositional operators and more sophisticated, Metropolis-corrected samplers.
-        </div>
-        </div>
-        </div>
-          <br>
-
-
-
-
-        <div class="row vspace-top">
-        <div class="col-sm-3">
-            <video width="100%" playsinline="" autoplay="" preload="" muted="">
-                <source src="materials/related/teaser_glide.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="col-sm-9">
-          <div class="paper-title">
-            <a href="https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/">Compositional Visual Generation with Composable Diffusion Models</a>
-        </div>
-        <div>
-            We present a method to compose different diffusion models together, drawing on the close connection of
-            diffusion models with EBMs. We illustrate how compositional operators enable
-            the ability to composing multiple sets of objects together as well as generate images subject to
-            complex text prompts.
-        </div>
-        </div>
-        </div>
-        <br>
-
-
-        
-
-        <div class="row vspace-top">
-        <div class="col-sm-3">
-            <div class="move-down">
-                <img src="materials/related/diffuser_schematic-01.png" class="img-fluid" alt="comp_carton" style="width:100%">
-            </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="paper-title">
-            <a href="https://diffusion-planning.github.io/">Planning with Diffusion for Flexible Behavior Synthesis</a>
-        </div>
-        <div>
-          Diffuser is a denoising diffusion probabilistic model that plans by iteratively refining randomly sampled noise. The denoising process lends itself to flexible conditioning, by either using gradients of an objective function to bias plans toward high-reward regions or conditioning the plan to reach a specified goal.
-        </div>
-        </div>
-        </div>
-      </div>
-    </div>
-        </div>
-</section> -->
 
 
 
@@ -504,6 +437,16 @@ This section presents real-world experiments demonstrating the effectiveness of 
 <footer class="footer">
   <div class="container">
     <!-- TODO: -->
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2509.00361">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
     <div class="columns is-centered">
       <div class="column is-8 has-text-centered">
         <div class="content">
